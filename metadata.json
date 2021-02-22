@@ -1,0 +1,86 @@
+{
+  "name": "netways-install",
+  "version": "0.0.0",
+  "author": "NETWAYS",
+  "summary": "Puppet Module with profile class for Icinga-Installer'
+  "license": "Apache-2.0",
+  "source": "git://github.com/NETWAYS/puppet-icinga-installer",
+  "project_page": "https://github.com/NETWAYS/puppet-icinga-installer",
+  "issues_url": "https://github.com/NETWAYS/puppet-icinga-installer/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 5.0.0 < 7.0.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": ">= 6.0.0 < 8.0.0"
+    },
+    {
+      "name": "puppet/zypprepo",
+      "version_requirement": ">= 2.2.1 < 4.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04",
+        "18.04",
+        "20.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "tags": [
+    "monitoring"
+  ],
+  "pdk-version": "1.18.1",
+  "template-url": "pdk-default#1.18.1",
+  "template-ref": "tags/1.18.1-0-g3d2e75c"
+}
