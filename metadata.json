@@ -2,7 +2,7 @@
   "name": "netways-install",
   "version": "0.0.0",
   "author": "NETWAYS",
-  "summary": "Puppet Module with profile class for Icinga-Installer'
+  "summary": "Puppet Module with profile class for Icinga-Installer',
   "license": "Apache-2.0",
   "source": "git://github.com/NETWAYS/puppet-icinga-installer",
   "project_page": "https://github.com/NETWAYS/puppet-icinga-installer",
