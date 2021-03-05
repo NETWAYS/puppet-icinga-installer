@@ -27,6 +27,7 @@ class install::worker(
   class { 'icinga::worker':
     ca_server        => $ca_server,
     zone             => $zone,
+    parent_zone      => $parent_zone,
     parent_endpoints => $parent_endpoints,
     global_zones     => $global_zones,
   }
