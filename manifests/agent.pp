@@ -22,6 +22,7 @@ class install::agent(
 
   class { 'icinga::agent':
     ca_server        => $ca_server,
+    parent_zone      => $parent_zone,
     parent_endpoints => $parent_endpoints,
     global_zones     => $global_zones,
   }
