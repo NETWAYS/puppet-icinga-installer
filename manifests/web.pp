@@ -57,6 +57,9 @@
 # @param [String] api_password  		condition: $frontend
 #   Icinga API password for user icingaweb2.
 #
+# @param [Boolean] business_processes		condition: $frontend
+#   Eanable/disable installation of Icinga Web 2 module Business Process.
+#
 class install::web(
   Boolean                  $backend                 = false,
   Enum['mysql', 'pgsql']   $backend_db_type         = 'mysql',
@@ -76,6 +79,7 @@ class install::web(
   Boolean                  $create_database         = false,  
   Stdlib::Host             $api_host                = 'localhost',
   String                   $api_password            = $install::params::web_api_password,
+  Boolean                  $business_processes      = false,
 ) inherits install::params {
 
   if $backend {
@@ -106,6 +110,12 @@ class install::web(
       backend_db_name  => $backend_db_name,
       backend_db_user  => $backend_db_username,
       backend_db_pass  => $backend_db_password,
+    }
+  }
+
+  if $business_processes {
+    class { 'icingaweb2::module::businessprocess':
+      install_method => 'package',
     }
   }
 
