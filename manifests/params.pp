@@ -43,7 +43,7 @@ class install::params {
         'nagios-plugins-load',
         'nagios-plugins-log',
         'nagios-plugins-mrtg',
-        'nagios-plugins-mrtgtgraf',
+        'nagios-plugins-mrtgtraf',
         'nagios-plugins-nagios',
         'nagios-plugins-nt',
         'nagios-plugins-ntp',
@@ -65,13 +65,13 @@ class install::params {
           $manage_epel    = true
           $manage_plugins = true
           $manage_extras  = true
-          $basic_plugins  =  nagios_plugins +  [ 'netways-plugins-mem' ]
+          $basic_plugins  =  $nagios_plugins +  [ 'netways-plugins-mem' ]
         } # os: redhat
         default: {
           $manage_epel    = false
           $manage_plugins = true
           $manage_extras  = true
-          $basic_plugins  = nagios_plugins
+          $basic_plugins  = $nagios_plugins
         }
       }
     } # family: redhat

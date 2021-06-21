@@ -19,7 +19,7 @@
 # @param [Enum['file', 'syslog']] logging_type
 #   Switch the log target. Only `file` is supported on Windows.
 #
-# @param [Optional[Icinga2::LogSeverity]] logging_level
+# @param [Icinga2::LogSeverity] logging_level
 #   Set the log level.
 #
 class install::server(
